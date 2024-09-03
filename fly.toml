@@ -1,12 +1,10 @@
-# fly.toml app configuration file generated for hello-svelte-jldec on 2024-09-03T14:27:34+01:00
+# fly.toml app configuration file generated for hello-svelte-jldec on 2024-09-03T16:12:29+01:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
 app = 'hello-svelte-jldec'
 primary_region = 'ams'
-
-[build]
 
 [http_service]
   internal_port = 3000
@@ -17,6 +15,6 @@ primary_region = 'ams'
   processes = ['app']
 
 [[vm]]
-  memory = '1gb'
-  cpu_kind = 'shared'
-  cpus = 1
+  size = 'shared-cpu-1x'
+  memory = 256
+
